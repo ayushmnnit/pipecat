@@ -119,6 +119,8 @@ class FlowConfig(BaseModel):
     :class:`~pipecat.flows.Flow` copies it onto the node configs and function
     schemas it builds, and :class:`~pipecat.flows.FlowManager` passes it to
     ``on_node_entered`` handlers and to an RTVI client as the flow moves.
+    Metadata is sent to the client, so keep anything the end user should not
+    see out of it.
 
     Parameters:
         initial_node: Name of the node the flow starts in.
